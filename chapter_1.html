@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>导言 - Love Logs</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="I Heart Logs 阅读笔记">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html" class="active"><strong aria-hidden="true">1.</strong> 导言</a></li><li class="chapter-item expanded "><a href="chapter2.html"><strong aria-hidden="true">2.</strong> 数据聚合</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Love Logs</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/PrivateRookie/love_log" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#导言" id="导言">导言</a></h1>
+<h2><a class="header" href="#什么是-log-" id="什么是-log-">什么是 Log ?</a></h2>
+<p>常见 log </p>
+<p><img src="assets/text_log.png" alt="text log" /></p>
+<blockquote>
+<p>a series of loosely structured requests, errors, or other messages in a sequence of rotating text files</p>
+</blockquote>
+<p>包含一连串松散结构（即强制结构）的请求，错误或其他信息的文本文件</p>
+<p>随着越来越多的服务或机器使用 log, log 逐渐被用于快速查询和图表化显示不同机器的行为，这时候英语不是很适用于结构化日志。</p>
+<p>这里要讨论的日志更接近于 <code>commit log</code> 或 <code>journal</code>，一种以时间排序，只追加的序列化记录。</p>
+<p><img src="assets/seq_log.png" alt="seq_log" /></p>
+<p>日志以写入顺序从0开始标记, 每个记录都有一个唯一标记；从左向右读，记录格式可以是普通文本，也可以是二进制数据。</p>
+<blockquote>
+<p>A log is not all that different from a file or a table. A file is an array of bytes, a table is
+an array of records, and a log is really just a kind of table or file where the records are
+sorted by time.</p>
+</blockquote>
+<blockquote>
+<p>However, it is important that we think about the log as an
+abstract data structure, not a text file.</p>
+</blockquote>
+<blockquote>
+<p>The answer is that logs have a specific purpose: they record what happened and
+when. For distributed data systems this is, in many ways, the very heart of the problem.</p>
+</blockquote>
+<h2><a class="header" href="#数据库中的-log" id="数据库中的-log">数据库中的 Log</a></h2>
+<p>数据库系统在很早之前就使用 log, 数据库向 log 写入数据库中各种记录变更信息，用于在不同备份之前同步数据，且由于 log 会被立即持久化，log 被用于数据库灾备恢复。</p>
+<p>数据库 log 两个主要作用</p>
+<ol>
+<li>在发布/消费模式下向其他副本传输数据</li>
+<li>保证不同副本间变更一致性的机制</li>
+</ol>
+<h2><a class="header" href="#分布式系统中的-log" id="分布式系统中的-log">分布式系统中的 Log</a></h2>
+<p>分布式系统的一个基础问题是数据一致性原则，根据“状态机复制原则(state machine replication principle)”</p>
+<blockquote>
+<p>If two identical, deterministic processes begin in the same state and get the same inputs
+in the same order, they will produce the same output and end in the same state.</p>
+</blockquote>
+<p>即如果两个相同的状态机以相同的状态开始，以相同的顺序获取相同输入，那么他们将会产生相同输出并停止于相同状态。</p>
+<p><code>Deterministic</code> 要求系统非时间依赖且不会让其他外界输入影响结果。例如一个基于 <code>gettimeofday()</code> 函数做决定的程序就不是一个 <code>Deterministic</code> 程序。</p>
+<p>如果能保证状态机相同且处于相同起始状态，只要我们向两个状态机以同样顺序输入相同数据，那我们就能保证两个状态机完全一致。</p>
+<p>log 正是“相同顺序相同输入”的保证。</p>
+<h2><a class="header" href="#以-log-为中心设计的多样性" id="以-log-为中心设计的多样性">以 Log 为中心设计的多样性</a></h2>
+<p>根据 log 内容，以 log 为中心的设计可以有多种应用方式。比如记录服务的请求并让其他副本独立地处理这些请求，或者记录请求导致的数据变化，甚至记录处理请求的 x86 指令集。</p>
+<p>物理或基于行的记录代表记录每个变化行的内容，逻辑或命令式记录代表记录导致记录变化的 SQL 语句。</p>
+<p>分布式系统常见两种复制模式</p>
+<p><img src="./assets/replication_model.png" alt="replication_model" /></p>
+<ol>
+<li>
+<p>主备模式，由一个推选而来的主节处理所有请求，并将这些请求按顺序写入 log，其他副本应用 log 中的状态变化以便和主节点同步。</p>
+</li>
+<li>
+<p>状态机模式(或多主模式), 每个节点都是对等的，写入请求首先会被写入 log 然后所有节点根据 log 中顺序依次应用这些写入请求。</p>
+</li>
+</ol>
+<h2><a class="header" href="#例子" id="例子">例子</a></h2>
+<p>TODO　写完例子</p>
+<h2><a class="header" href="#log-和共识" id="log-和共识">Log 和共识</a></h2>
+<blockquote>
+<p>The log will become something of a commoditized interface, with many algorithms and implementations competing to provide the best guarantees and optimal performance</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+                            <a rel="next" href="chapter2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+                    <a rel="next" href="chapter2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
