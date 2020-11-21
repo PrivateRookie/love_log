@@ -1,0 +1,15 @@
+[book]
+authors = ["PrivateRookie"]
+language = "zh-cn"
+multilingual = false
+src = "src"
+title = "Love Logs"
+description = "I Heart Logs 阅读笔记"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/PrivateRookie/love_log"
+git-repository-icon = "fa-github"
+
+[output.html.search]
+enable = false
